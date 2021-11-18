@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayingNowCollectionViewCell" id="gTV-IL-0wX" customClass="PlayingNowCollectionViewCell" customModule="MovieIosDicoding" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ue6-bj-2D1" customClass="CardView" customModule="MovieIosDicoding" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="138"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="harrypotterposter" translatesAutoresizingMaskIntoConstraints="NO" id="lqF-l0-VHw">
+                                <rect key="frame" x="5" y="5" width="150" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="Wjm-ut-0aw"/>
+                                    <constraint firstAttribute="width" constant="150" id="ktU-wY-mYc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP1-Yz-POe">
+                                <rect key="frame" x="6" y="101" width="149" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F7n-lK-PyX">
+                                <rect key="frame" x="6" y="121" width="15" height="15"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="HMW-NR-UoI"/>
+                                    <constraint firstAttribute="height" constant="15" id="paG-DX-3Np"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-K8-kit">
+                                <rect key="frame" x="27" y="121.5" width="25" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lqF-l0-VHw" firstAttribute="top" secondItem="Ue6-bj-2D1" secondAttribute="top" constant="5" id="0sR-s9-YJF"/>
+                            <constraint firstAttribute="trailing" secondItem="lqF-l0-VHw" secondAttribute="trailing" constant="5" id="AQw-bx-z0b"/>
+                            <constraint firstItem="lqF-l0-VHw" firstAttribute="leading" secondItem="Ue6-bj-2D1" secondAttribute="leading" constant="5" id="Box-UX-8Dg"/>
+                            <constraint firstItem="hKI-K8-kit" firstAttribute="top" secondItem="F7n-lK-PyX" secondAttribute="top" id="DC3-BR-vDq"/>
+                            <constraint firstItem="F7n-lK-PyX" firstAttribute="leading" secondItem="HP1-Yz-POe" secondAttribute="leading" id="NqD-14-vEW"/>
+                            <constraint firstItem="F7n-lK-PyX" firstAttribute="top" secondItem="HP1-Yz-POe" secondAttribute="bottom" constant="0.5" id="QrP-Sc-NQr"/>
+                            <constraint firstAttribute="trailing" secondItem="hKI-K8-kit" secondAttribute="trailing" constant="108" id="UdH-7g-YBv"/>
+                            <constraint firstItem="hKI-K8-kit" firstAttribute="bottom" secondItem="F7n-lK-PyX" secondAttribute="bottom" id="WJC-sO-gKl"/>
+                            <constraint firstAttribute="trailing" secondItem="HP1-Yz-POe" secondAttribute="trailing" constant="5" id="b9S-qw-A3n"/>
+                            <constraint firstAttribute="bottom" secondItem="F7n-lK-PyX" secondAttribute="bottom" constant="1.5" id="f9U-5P-GRD"/>
+                            <constraint firstItem="HP1-Yz-POe" firstAttribute="top" secondItem="lqF-l0-VHw" secondAttribute="bottom" constant="4" id="hck-qz-2qh"/>
+                            <constraint firstItem="hKI-K8-kit" firstAttribute="leading" secondItem="F7n-lK-PyX" secondAttribute="trailing" constant="6" id="ktz-iN-WEu"/>
+                            <constraint firstItem="HP1-Yz-POe" firstAttribute="leading" secondItem="Ue6-bj-2D1" secondAttribute="leading" constant="6" id="l2o-QW-Qkn"/>
+                            <constraint firstItem="F7n-lK-PyX" firstAttribute="top" secondItem="HP1-Yz-POe" secondAttribute="bottom" constant="0.5" id="mv2-6n-nht"/>
+                            <constraint firstAttribute="bottom" secondItem="HP1-Yz-POe" secondAttribute="bottom" constant="17" id="sGe-mu-HZL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ue6-bj-2D1" secondAttribute="trailing" id="ARF-nm-n7D"/>
+                <constraint firstAttribute="bottom" secondItem="Ue6-bj-2D1" secondAttribute="bottom" id="FlX-yl-C5m"/>
+                <constraint firstItem="Ue6-bj-2D1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YUg-zj-3Jf"/>
+                <constraint firstItem="Ue6-bj-2D1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rO4-A8-UmT"/>
+            </constraints>
+            <size key="customSize" width="161" height="138"/>
+            <connections>
+                <outlet property="imgMovie" destination="lqF-l0-VHw" id="kHl-bN-trf"/>
+                <outlet property="rateMovie" destination="hKI-K8-kit" id="fh6-3l-WoY"/>
+                <outlet property="titleMovie" destination="HP1-Yz-POe" id="mwh-Wc-20w"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="98.4375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="harrypotterposter" width="291" height="437"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
