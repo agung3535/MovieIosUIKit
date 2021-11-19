@@ -33,19 +33,22 @@ extension MovieRepository: MovieRepositoryProtocol {
     }
     
     func cekFavorite(movie: MovieModel) -> AnyPublisher<Bool, Error> {
-        return self.locale.cekFavorite(from: movie)
+        let data = MovieMapper.mapMovieDomainToFavoriteEntites(input: movie)
+        return self.locale.cekFavorite(from: data)
             .map { $0 }
             .eraseToAnyPublisher()
     }
     
     func deleteFavorite(movie: MovieModel) -> AnyPublisher<Bool, Error> {
-        return self.locale.deleteFavoriteMovie(from: movie)
+        let data = MovieMapper.mapMovieDomainToFavoriteEntites(input: movie)
+        return self.locale.deleteFavoriteMovie(from: data)
             .map { $0 }
             .eraseToAnyPublisher()
     }
     
     func addFavorite(movie: MovieModel) -> AnyPublisher<Bool, Error> {
-        return self.locale.addFavoriteMovie(from: movie)
+        let data = MovieMapper.mapMovieDomainToFavoriteEntites(input: movie)
+        return self.locale.addFavoriteMovie(from: data)
             .map { $0 }
             .eraseToAnyPublisher()
     }
@@ -57,11 +60,9 @@ extension MovieRepository: MovieRepositoryProtocol {
     }
     
     func getPopularMovies() -> AnyPublisher<[MovieModel], Error> {
-        print("calll popular")
         return self.locale.getPopularMovies()
             .flatMap { result -> AnyPublisher<[MovieModel], Error> in
                 if result.isEmpty {
-                    print("masuk sini")
                     return self.remote.getPopularMovies()
                         .map { MovieMapper.mapMovieResponseToPopularEntities(input: $0)}
                         .flatMap { self.locale.addPopularMovie(from: $0)}
@@ -70,7 +71,6 @@ extension MovieRepository: MovieRepositoryProtocol {
                         .map{ MovieMapper.mapPopularMovieEntitiesToDomain(input: $0) }
                         }.eraseToAnyPublisher()
                 }else {
-                    print("Tidak empty")
                     return self.locale.getPopularMovies()
                         .map { MovieMapper.mapPopularMovieEntitiesToDomain(input: $0)}.eraseToAnyPublisher()
                 }

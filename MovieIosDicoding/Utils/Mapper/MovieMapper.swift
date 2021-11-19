@@ -43,6 +43,20 @@ final class MovieMapper {
         }
     }
     
+    static func mapMovieDomainToFavoriteEntites(input movieData: MovieModel) -> FavoriteEntity {
+        let favMovie = FavoriteEntity()
+        favMovie.id = movieData.id
+        favMovie.title = movieData.title
+        favMovie.backdropPath = movieData.backdropPath
+        favMovie.originalLanguage = movieData.originalLanguage
+        favMovie.overview = movieData.overview
+        favMovie.popularity = movieData.popularity
+        favMovie.releaseData = movieData.releaseDate
+        favMovie.voteAverage = movieData.voteAverage
+        favMovie.voteCount = movieData.voteCount
+        return favMovie
+    }
+    
     static func mapPopularMovieEntitiesToDomain(input movieResource: [PopularMovieEntity]) -> [MovieModel] {
         return movieResource.map { result in
             return MovieModel(backdropPath: result.backdropPath,

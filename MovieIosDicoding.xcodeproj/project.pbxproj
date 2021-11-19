@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		493EFE95274213ED00405F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493EFE94274213ED00405F32 /* AppDelegate.swift */; };
 		493EFE97274213ED00405F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493EFE96274213ED00405F32 /* SceneDelegate.swift */; };
-		493EFE99274213ED00405F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493EFE98274213ED00405F32 /* ViewController.swift */; };
+		493EFE99274213ED00405F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493EFE98274213ED00405F32 /* HomeViewController.swift */; };
 		493EFE9C274213ED00405F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493EFE9A274213ED00405F32 /* Main.storyboard */; };
 		493EFE9E274213F100405F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493EFE9D274213F100405F32 /* Assets.xcassets */; };
 		493EFEA1274213F100405F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493EFE9F274213F100405F32 /* LaunchScreen.storyboard */; };
@@ -65,6 +65,13 @@
 		498D4A63274556E000C1D1F5 /* ProfileInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4A62274556E000C1D1F5 /* ProfileInteractorProtocol.swift */; };
 		498D4A65274558DC00C1D1F5 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4A64274558DC00C1D1F5 /* ProfileInteractor.swift */; };
 		498D4A672745596300C1D1F5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4A662745596300C1D1F5 /* ProfileViewModel.swift */; };
+		498D4AAD2747BA5D00C1D1F5 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4AAC2747BA5D00C1D1F5 /* HomeProvider.swift */; };
+		498D4AAF2747BA8100C1D1F5 /* HomeProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4AAE2747BA8100C1D1F5 /* HomeProviderProtocol.swift */; };
+		498D4AB22747C25900C1D1F5 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4AB12747C25900C1D1F5 /* HomeNavigationViewController.swift */; };
+		498D4AB72747FA6C00C1D1F5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4AB62747FA6C00C1D1F5 /* TabBarViewController.swift */; };
+		498D4AB92748094700C1D1F5 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4AB82748094700C1D1F5 /* ProfileNavigationController.swift */; };
+		498D4ABB2748095A00C1D1F5 /* ProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4ABA2748095A00C1D1F5 /* ProfileProvider.swift */; };
+		498D4ABD274809D600C1D1F5 /* ProfileProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D4ABC274809D600C1D1F5 /* ProfileProviderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +88,7 @@
 		493EFE91274213ED00405F32 /* MovieIosDicoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieIosDicoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493EFE94274213ED00405F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		493EFE96274213ED00405F32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		493EFE98274213ED00405F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		493EFE98274213ED00405F32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		493EFE9B274213ED00405F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		493EFE9D274213F100405F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		493EFEA0274213F100405F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,6 +141,13 @@
 		498D4A62274556E000C1D1F5 /* ProfileInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorProtocol.swift; sourceTree = "<group>"; };
 		498D4A64274558DC00C1D1F5 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		498D4A662745596300C1D1F5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		498D4AAC2747BA5D00C1D1F5 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
+		498D4AAE2747BA8100C1D1F5 /* HomeProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProviderProtocol.swift; sourceTree = "<group>"; };
+		498D4AB12747C25900C1D1F5 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
+		498D4AB62747FA6C00C1D1F5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		498D4AB82748094700C1D1F5 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		498D4ABA2748095A00C1D1F5 /* ProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProvider.swift; sourceTree = "<group>"; };
+		498D4ABC274809D600C1D1F5 /* ProfileProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProviderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +220,7 @@
 		493EFEAA2742147B00405F32 /* UIkit */ = {
 			isa = PBXGroup;
 			children = (
+				498D4AB52747FA1F00C1D1F5 /* TabBar */,
 				498D4A492745054E00C1D1F5 /* DetailMovie */,
 				498D4A352744E6BE00C1D1F5 /* Profile */,
 				4977AAC22743DBD300B08541 /* CustomView */,
@@ -280,7 +295,9 @@
 		493EFEC02742517200405F32 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				493EFE98274213ED00405F32 /* ViewController.swift */,
+				498D4AB02747C22F00C1D1F5 /* Navigation */,
+				498D4AAB2747BA3300C1D1F5 /* HomeProvide */,
+				493EFE98274213ED00405F32 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -361,6 +378,8 @@
 				493EFF0F2742AF7B00405F32 /* HomeInteractorProtocol.swift */,
 				498D4A472744F64F00C1D1F5 /* DetailInteractorProtocol.swift */,
 				498D4A62274556E000C1D1F5 /* ProfileInteractorProtocol.swift */,
+				498D4AAE2747BA8100C1D1F5 /* HomeProviderProtocol.swift */,
+				498D4ABC274809D600C1D1F5 /* ProfileProviderProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -423,6 +442,8 @@
 		498D4A352744E6BE00C1D1F5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				498D4AB42747C35400C1D1F5 /* Navigation */,
+				498D4AB32747C34C00C1D1F5 /* ProfileProvider */,
 				498D4A362744E7BD00C1D1F5 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -451,6 +472,46 @@
 				498D4A58274516E100C1D1F5 /* MovieIosDicodingTests.swift */,
 			);
 			path = MovieIosDicodingTests;
+			sourceTree = "<group>";
+		};
+		498D4AAB2747BA3300C1D1F5 /* HomeProvide */ = {
+			isa = PBXGroup;
+			children = (
+				498D4AAC2747BA5D00C1D1F5 /* HomeProvider.swift */,
+			);
+			path = HomeProvide;
+			sourceTree = "<group>";
+		};
+		498D4AB02747C22F00C1D1F5 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				498D4AB12747C25900C1D1F5 /* HomeNavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		498D4AB32747C34C00C1D1F5 /* ProfileProvider */ = {
+			isa = PBXGroup;
+			children = (
+				498D4ABA2748095A00C1D1F5 /* ProfileProvider.swift */,
+			);
+			path = ProfileProvider;
+			sourceTree = "<group>";
+		};
+		498D4AB42747C35400C1D1F5 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				498D4AB82748094700C1D1F5 /* ProfileNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		498D4AB52747FA1F00C1D1F5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				498D4AB62747FA6C00C1D1F5 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,13 +638,17 @@
 				493EFEC22742556300405F32 /* GenreResponse.swift in Sources */,
 				498D4A63274556E000C1D1F5 /* ProfileInteractorProtocol.swift in Sources */,
 				4977AAC62743DD2F00B08541 /* UIViewExtension.swift in Sources */,
-				493EFE99274213ED00405F32 /* ViewController.swift in Sources */,
+				493EFE99274213ED00405F32 /* HomeViewController.swift in Sources */,
 				498D4A3E2744EB4100C1D1F5 /* FavoriteMovie.swift in Sources */,
 				493EFEF32742992A00405F32 /* FavoriteEntity.swift in Sources */,
 				493EFF102742AF7B00405F32 /* HomeInteractorProtocol.swift in Sources */,
+				498D4AB22747C25900C1D1F5 /* HomeNavigationViewController.swift in Sources */,
 				493EFEEB2742976300405F32 /* PlayingNowEntity.swift in Sources */,
 				498D4A5127450FE300C1D1F5 /* DetailViewModel.swift in Sources */,
 				493EFEDF27427EE600405F32 /* StringExtension.swift in Sources */,
+				498D4ABD274809D600C1D1F5 /* ProfileProviderProtocol.swift in Sources */,
+				498D4ABB2748095A00C1D1F5 /* ProfileProvider.swift in Sources */,
+				498D4AB92748094700C1D1F5 /* ProfileNavigationController.swift in Sources */,
 				493EFE95274213ED00405F32 /* AppDelegate.swift in Sources */,
 				493EFED12742579700405F32 /* ApiResponse.swift in Sources */,
 				498D4A482744F64F00C1D1F5 /* DetailInteractorProtocol.swift in Sources */,
@@ -596,6 +661,7 @@
 				4977AABB2743BE7300B08541 /* TrendingCollectionViewCell.swift in Sources */,
 				493EFEE1274280B900405F32 /* RemoteDataSource.swift in Sources */,
 				498D4A372744E7BD00C1D1F5 /* ProfileViewController.swift in Sources */,
+				498D4AAF2747BA8100C1D1F5 /* HomeProviderProtocol.swift in Sources */,
 				498D4A4D2745075300C1D1F5 /* UIViewController.swift in Sources */,
 				498D4A672745596300C1D1F5 /* ProfileViewModel.swift in Sources */,
 				498D4A4B2745056500C1D1F5 /* DetailMovieViewController.swift in Sources */,
@@ -605,6 +671,7 @@
 				493EFF0427429F6700405F32 /* LocalDataSourceProtocol.swift in Sources */,
 				498D4A4F27450EFC00C1D1F5 /* DetailMovieInteractor.swift in Sources */,
 				498D4A3B2744E86900C1D1F5 /* MyFavoriteCollectionViewCell.swift in Sources */,
+				498D4AB72747FA6C00C1D1F5 /* TabBarViewController.swift in Sources */,
 				493EFF132742B18A00405F32 /* HomeViewModel.swift in Sources */,
 				4977AACA2743F10800B08541 /* PlayingNowCollectionViewCell.swift in Sources */,
 				493EFECF2742578800405F32 /* AppError.swift in Sources */,
@@ -612,6 +679,7 @@
 				493EFEE4274295F000405F32 /* Injection.swift in Sources */,
 				493EFEFA27429E9E00405F32 /* MovieRepository.swift in Sources */,
 				493EFEC52742565500405F32 /* GenreResource.swift in Sources */,
+				498D4AAD2747BA5D00C1D1F5 /* HomeProvider.swift in Sources */,
 				493EFECD2742577D00405F32 /* Method.swift in Sources */,
 				493EFEE92742964500405F32 /* PopularMovieEntity.swift in Sources */,
 				493EFEF727429C5500405F32 /* DatabaseError.swift in Sources */,

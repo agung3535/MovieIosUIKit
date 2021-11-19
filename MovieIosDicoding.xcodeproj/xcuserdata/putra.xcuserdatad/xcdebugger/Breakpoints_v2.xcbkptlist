@@ -3,4 +3,130 @@
    uuid = "F30B30E8-4F85-45B6-8DD5-2AA23CA7CC35"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - 898a1ef54ba59fac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.trendingCollectionView.getter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - 68cd5a71b057aba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.trendingCollectionView.setter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - 2aef4d709ca40087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.trendingCollectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - 74b92b1c51337f4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.trendingCollectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - d0ad181365fda22c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.init(viewModel: MovieIosDicoding.HomeViewModel) -&gt; MovieIosDicoding.HomeViewController"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "A22EEEF7-2132-4A8A-BFFD-6B7D884A517B - 98733dc3bf82a5e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieIosDicoding.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MovieIosDicoding.HomeViewController&gt;"
+                  moduleName = "MovieIosDicoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/putra/Project/IOS/Porto/MovieIosDicoding/MovieIosDicoding/View/UIkit/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "181">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DBECB21-9F6F-4F9B-91BC-65FB0CB5B604"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieIosDicoding/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

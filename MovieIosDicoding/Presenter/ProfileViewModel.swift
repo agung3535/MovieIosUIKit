@@ -10,10 +10,14 @@ import Combine
 
 class ProfileViewModel: ObservableObject {
     private var cancelables = Set<AnyCancellable>()
-    private let profileProtocol = Injection.init().provideProfile()
+    private let profileProtocol: ProfileInteractorProtocol
     var favMovie = CurrentValueSubject<[MovieModel], Never>([MovieModel]())
     var errorMessage = CurrentValueSubject<String, Never>("")
     var hasFavorite = CurrentValueSubject<Bool, Never>(false)
+    
+    init(profileProtocol: ProfileInteractorProtocol) {
+        self.profileProtocol = profileProtocol
+    }
     
     func getFavorite() {
         profileProtocol.getFavoriteMovie()

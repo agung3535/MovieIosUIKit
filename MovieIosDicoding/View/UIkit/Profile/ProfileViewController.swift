@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userProfile: UIImageView!
     @IBOutlet weak var favoriteCollection: UICollectionView!
     var subscriptions = Set<AnyCancellable>()
-    private let profileViewModel = ProfileViewModel()
+    var profileViewModel: ProfileViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteCollection.delegate = self
@@ -24,15 +24,6 @@ class ProfileViewController: UIViewController {
         self.title = ""
         userProfile.layer.masksToBounds = true
         userProfile.layer.cornerRadius = userProfile.bounds.width / 2.5
-//        profileViewModel.hasFavorite.sink {[weak self] (res) in
-//            if res {
-//                self?.emptyFav.isHidden = true
-//                self?.favoriteCollection.isHidden = false
-//            } else {
-//                self?.emptyFav.isHidden = false
-//                self?.favoriteCollection.isHidden = true
-//            }
-//        }.store(in: &subscriptions)
         
         
     }
@@ -44,11 +35,11 @@ class ProfileViewController: UIViewController {
     }
     func getData() {
         print("get data dipanggil")
-        profileViewModel.getFavorite()
-        profileViewModel.favMovie.sink {[weak self] (_) in
+        profileViewModel?.getFavorite()
+        profileViewModel?.favMovie.sink {[weak self] (_) in
             self?.favoriteCollection.reloadData()
         }.store(in: &subscriptions)
-        print("size favorite = \(profileViewModel.favMovie.value.count)")
+        
     }
     
     func registerCell() {
@@ -59,12 +50,12 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profileViewModel.favMovie.value.count
+        return (profileViewModel?.favMovie.value.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyFavoriteCollectionViewCell.identifier, for: indexPath) as! MyFavoriteCollectionViewCell
-        cell.setup(favorite: profileViewModel.favMovie.value[indexPath.row])
+        cell.setup(favorite: (profileViewModel?.favMovie.value[indexPath.row])!)
         return cell
     }
     
@@ -73,7 +64,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         if  collectionView == favoriteCollection {
            
             let controller = DetailMovieViewController.instantiate()
-            let detailProtocol = Injection.init().provideDetail(movie: profileViewModel.favMovie.value[indexPath.row])
+            let detailProtocol = Injection.init().provideDetail(movie: (profileViewModel?.favMovie.value[indexPath.row])!)
             controller.detailViewModel = DetailViewModel(detailInteractor: detailProtocol)
             navigationController?.pushViewController(controller, animated: true)
         }

@@ -127,22 +127,12 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func addFavoriteMovie(from movie: MovieModel) -> AnyPublisher<Bool, Error> {
+    func addFavoriteMovie(from movie: FavoriteEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool ,Error> { completion in
             if let realm = self.realm {
                 do {
                     try realm.write {
-                        let fav = FavoriteEntity()
-                        fav.title = movie.title
-                        fav.overview = movie.overview
-                        fav.popularity = movie.popularity
-                        fav.voteAverage = movie.voteAverage
-                        fav.backdropPath = movie.backdropPath
-                        fav.voteCount = movie.voteCount
-                        fav.id = movie.id
-                        fav.originalLanguage = movie.originalLanguage
-                        fav.releaseData = movie.releaseDate
-                        realm.add(fav)
+                        realm.add(movie)
                         completion(.success(true))
                     }
                 }catch {
@@ -152,7 +142,7 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func deleteFavoriteMovie(from movie: MovieModel) -> AnyPublisher<Bool, Error> {
+    func deleteFavoriteMovie(from movie: FavoriteEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
 //                print("movie id = \(movieID)")
@@ -178,7 +168,7 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func cekFavorite(from movie: MovieModel) -> AnyPublisher<Bool, Error> {
+    func cekFavorite(from movie: FavoriteEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 let predicate = NSPredicate(format: "id == %d", movie.id)

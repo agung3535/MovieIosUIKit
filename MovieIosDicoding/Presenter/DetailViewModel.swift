@@ -37,7 +37,6 @@ class DetailViewModel: ObservableObject {
                     print("error : \(error)")
                 }
             }, receiveValue: {[weak self] (result) in
-                print("result akhir :\(result)")
                 self?.isFavorite.send(result)
             }).store(in: &cancelables)
     }

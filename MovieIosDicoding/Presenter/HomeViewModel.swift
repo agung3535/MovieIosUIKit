@@ -9,10 +9,12 @@ import Foundation
 import Combine
 import RealmSwift
 
+
+
 class HomeViewModel: ObservableObject {
     
     private var cancelables = Set<AnyCancellable>()
-    private let homeProtocol = Injection.init().provideHome()
+    private let homeProtocol: HomeInteractorProtocol
     let popularMovie = CurrentValueSubject<[MovieModel],Never>([MovieModel]())
     let playingMovie = CurrentValueSubject<[MovieModel],Never>([MovieModel]())
     let loadingTrendingState = CurrentValueSubject<Bool,Never>(true)
@@ -20,6 +22,9 @@ class HomeViewModel: ObservableObject {
     let errorMessage = CurrentValueSubject<String,Never>("")
     let errorPlayingMsg = CurrentValueSubject<String,Never>("")
     
+    init(homeProtocol: HomeInteractorProtocol) {
+        self.homeProtocol = homeProtocol
+    }
     
     func getPopularMovie() {
         homeProtocol.getPopularMovie()

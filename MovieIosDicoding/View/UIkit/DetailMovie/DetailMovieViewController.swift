@@ -37,7 +37,6 @@ class DetailMovieViewController: UIViewController {
         detailViewModel.cekFavorite(movie: detailViewModel.movie.value)
         detailViewModel.isFavorite.sink{ [weak self] (fav) in
             if fav {
-                print("fav is =\(fav)")
                 let largeConfig = UIImage.SymbolConfiguration(pointSize: 40, weight: .thin, scale: .small)
                 self?.favBtn.setImage(UIImage(systemName: "heart.fill", withConfiguration: largeConfig), for: .normal)
             }else {
@@ -51,14 +50,11 @@ class DetailMovieViewController: UIViewController {
     
 
     @IBAction func addFavorite(_ sender: Any) {
-        print("value fav tanpa sink = \(detailViewModel.isFavorite.value)")
             if detailViewModel.isFavorite.value {
-                print("Masuk delete")
                 self.detailViewModel.deleteFavorite(movie: detailViewModel.movie.value)
                 let largeConfig = UIImage.SymbolConfiguration(pointSize: 40, weight: .thin, scale: .small)
                 self.favBtn.setImage(UIImage(systemName: "heart.fill", withConfiguration: largeConfig), for: .normal)
             }else {
-                print("masuk else fav ")
                 self.detailViewModel.setFavorite(movie: detailViewModel.movie.value)
                 let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin, scale: .small)
                 self.favBtn.setImage(UIImage(systemName: "heart", withConfiguration: largeConfig), for: .normal)

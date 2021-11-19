@@ -13,7 +13,7 @@
         <!--Moviepedia-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118.840579710145" y="75"/>
+            <point key="canvasLocation" x="2078" y="75"/>
         </scene>
         <!--Detail Movie View Controller-->
         <scene sceneID="H0X-7i-Ebs">
@@ -348,7 +348,7 @@
         <!--Home-->
         <scene sceneID="3R9-Ob-CuG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aDo-dR-K9b" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="aDo-dR-K9b" customClass="HomeNavigationViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="vT5-7b-Rnf">
                         <color key="badgeColor" red="1" green="0.65944672120000003" blue="0.24240384609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
@@ -383,7 +383,7 @@
         <!--Profile View Controller-->
         <scene sceneID="QTN-tX-HXY">
             <objects>
-                <viewController id="GD0-Ei-k1F" customClass="ProfileViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" id="GD0-Ei-k1F" customClass="ProfileViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whk-eH-Cnd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="1208.6956521739132" y="834.375"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="uZf-gO-9QS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="S7y-MF-QKR" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbar_main" automaticallyAdjustsScrollViewInsets="NO" id="S7y-MF-QKR" customClass="TabBarViewController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Cp-8T-hw2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -507,7 +507,7 @@
         <!--Profile-->
         <scene sceneID="KcM-aZ-rpA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p61-oB-Pw4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="p61-oB-Pw4" customClass="ProfileNavigationController" customModule="MovieIosDicoding" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="hUN-lD-DZl">
                         <imageReference key="image" image="person.fill" catalog="system"/>
                         <color key="badgeColor" red="1" green="0.65944672120000003" blue="0.24240384609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

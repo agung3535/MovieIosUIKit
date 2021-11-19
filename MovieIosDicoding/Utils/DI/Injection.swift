@@ -15,7 +15,6 @@ final class Injection: NSObject {
         let realm = try? Realm()
         let locale: LocalDataSource = LocalDataSource.sharedInstance(realm)
         let remote: RemoteDataSource = RemoteDataSource.sharedInstance
-        print("dipanggil realm =\(realm)")
         return MovieRepository.shareInstance(locale,remote)
     }
     
