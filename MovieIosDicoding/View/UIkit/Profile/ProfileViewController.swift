@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         favoriteCollection.dataSource = self
         // Do any additional setup after loading the view.
         registerCell()
-        
+        self.title = ""
         userProfile.layer.masksToBounds = true
         userProfile.layer.cornerRadius = userProfile.bounds.width / 2.5
 //        profileViewModel.hasFavorite.sink {[weak self] (res) in
@@ -33,20 +33,22 @@ class ProfileViewController: UIViewController {
 //                self?.favoriteCollection.isHidden = true
 //            }
 //        }.store(in: &subscriptions)
-       
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getData()
         print("home data dipanggil")
-        profileViewModel.favMovie.sink {[weak self] (_) in
-            self?.favoriteCollection.reloadData()
-        }.store(in: &subscriptions)
+        
     }
     func getData() {
         print("get data dipanggil")
         profileViewModel.getFavorite()
+        profileViewModel.favMovie.sink {[weak self] (_) in
+            self?.favoriteCollection.reloadData()
+        }.store(in: &subscriptions)
+        print("size favorite = \(profileViewModel.favMovie.value.count)")
     }
     
     func registerCell() {
@@ -69,7 +71,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if  collectionView == favoriteCollection {
-            print("aaaaa masuk")
+           
             let controller = DetailMovieViewController.instantiate()
             let detailProtocol = Injection.init().provideDetail(movie: profileViewModel.favMovie.value[indexPath.row])
             controller.detailViewModel = DetailViewModel(detailInteractor: detailProtocol)

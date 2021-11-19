@@ -26,10 +26,11 @@ class ProfileViewModel: ObservableObject {
                     self?.errorMessage.send(error.localizedDescription)
                 }
             }, receiveValue: {[weak self] (result) in
-                if !result.isEmpty {
+                
                     self?.hasFavorite.send(true)
                     self?.favMovie.send(result)
-                }
+                    print("size favorite viewmodel = \(result.count)")
+                
             }).store(in: &cancelables)
     }
     

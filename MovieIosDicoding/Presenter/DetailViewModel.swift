@@ -10,16 +10,21 @@ import Combine
 class DetailViewModel: ObservableObject {
 
     private let detailInteractor: DetailInteractorProtocol
-    let movie = CurrentValueSubject<MovieModel,Never>(MovieModel(backdropPath: "", id: 0, originalLanguage: "", overview: "", popularity: "", releaseDate: "", title: "", voteAverage: "", voteCount: 0))
+    let movie = CurrentValueSubject<MovieModel,Never>(MovieModel(backdropPath: "",
+                                                                 id: 0, originalLanguage: "",
+                                                                 overview: "",
+                                                                 popularity: "",
+                                                                 releaseDate: "",
+                                                                 title: "",
+                                                                 voteAverage: "",
+                                                                 voteCount: 0))
     private var cancelables = Set<AnyCancellable>()
-    let isFavorite = CurrentValueSubject<Bool,Never>(false)
-    let errorMessage = CurrentValueSubject<String,Never>("")
-  
+    let isFavorite = CurrentValueSubject<Bool, Never>(false)
+    let errorMessage = CurrentValueSubject<String, Never>("")
     init(detailInteractor: DetailInteractorProtocol) {
         self.detailInteractor = detailInteractor
         movie.send(detailInteractor.getDetailMovie())
     }
-    
     func setFavorite(movie: MovieModel) {
         detailInteractor.addFavorite(movie: movie)
             .receive(on: RunLoop.main)
@@ -35,9 +40,7 @@ class DetailViewModel: ObservableObject {
                 print("result akhir :\(result)")
                 self?.isFavorite.send(result)
             }).store(in: &cancelables)
-        
     }
-    
     func deleteFavorite(movie: MovieModel) {
         detailInteractor.deleteFavorite(movie: movie)
             .receive(on: RunLoop.main)
@@ -52,7 +55,6 @@ class DetailViewModel: ObservableObject {
                 self?.isFavorite.send(!result)
             }).store(in: &cancelables)
     }
-    
     func cekFavorite(movie: MovieModel) {
         detailInteractor.cekFavorite(movie: movie)
             .receive(on: RunLoop.main)
@@ -68,7 +70,6 @@ class DetailViewModel: ObservableObject {
                 self?.isFavorite.send(result)
             }).store(in: &cancelables)
     }
-    
     func removeFavorite(movieId: String) {
         detailInteractor.removeFavorite(movieId: movieId)
             .receive(on: RunLoop.main)
@@ -83,6 +84,4 @@ class DetailViewModel: ObservableObject {
                 self?.isFavorite.send(false)
             }).store(in: &cancelables)
     }
-    
-    
 }

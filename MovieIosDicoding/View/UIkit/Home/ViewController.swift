@@ -10,9 +10,10 @@ import SwiftUI
 import Combine
 class ViewController: UIViewController {
     
-//    @IBOutlet weak var genreCollectionView: UICollectionView!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     @IBOutlet weak var playingNowCollectionView: UICollectionView!
+    @IBOutlet weak var loadingPlaying: UIActivityIndicatorView!
     private let homeViewMode = HomeViewModel()
     var subscriptions = Set<AnyCancellable>()
     
@@ -20,19 +21,32 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
         trendingCollectionView.delegate = self
         trendingCollectionView.dataSource = self
         playingNowCollectionView.delegate = self
         playingNowCollectionView.dataSource = self
         registerCell()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         callApi()
         homeViewMode.popularMovie.sink{[weak self] (_) in
             self?.trendingCollectionView.reloadData()
         }.store(in: &subscriptions)
         homeViewMode.playingMovie.sink{[weak self] (_) in
             self?.playingNowCollectionView.reloadData()
+        }.store(in: &subscriptions)
+        homeViewMode.loadingTrendingState.sink{ [weak self] (loading) in
+            if !loading {
+                self?.loadingView.isHidden = true
+            }
+        }.store(in: &subscriptions)
+        
+        homeViewMode.loadingPlayingState.sink { [weak self] (loading) in
+            if !loading {
+                self?.loadingPlaying.isHidden = true
+            }
         }.store(in: &subscriptions)
     }
 

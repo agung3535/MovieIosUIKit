@@ -31,6 +31,9 @@ class DetailMovieViewController: UIViewController {
             self?.overviewLbl.text = data.overview
             self?.watchTotal.text = String(data.popularity)
         }.store(in: &subscriptions)
+        navigationController?.navigationBar.tintColor = UIColor.orange
+       
+        
         detailViewModel.cekFavorite(movie: detailViewModel.movie.value)
         detailViewModel.isFavorite.sink{ [weak self] (fav) in
             if fav {
