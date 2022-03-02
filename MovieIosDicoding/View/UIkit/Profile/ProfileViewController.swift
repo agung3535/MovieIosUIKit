@@ -10,6 +10,8 @@ import Combine
 class ProfileViewController: UIViewController {
 
     
+    
+    
     @IBOutlet weak var emptyFav: UILabel!
     @IBOutlet weak var userProfile: UIImageView!
     @IBOutlet weak var favoriteCollection: UICollectionView!
@@ -36,7 +38,16 @@ class ProfileViewController: UIViewController {
     func getData() {
         print("get data dipanggil")
         profileViewModel?.getFavorite()
-        profileViewModel?.favMovie.sink {[weak self] (_) in
+        profileViewModel?.favMovie.sink {[weak self] (data) in
+            if data.isEmpty {
+                print("masuk empty")
+                self?.emptyFav.isHidden = false
+                self?.favoriteCollection.isHidden = true
+            }else {
+                print("tidak empty")
+                self?.emptyFav.isHidden = true
+                self?.favoriteCollection.isHidden = false
+            }
             self?.favoriteCollection.reloadData()
         }.store(in: &subscriptions)
         

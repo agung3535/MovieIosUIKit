@@ -29,31 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let window = UIWindow(windowScene: windowScene)
 //        let storyboard = UIStoryboard(name: "Main", bundle:  nil)
 //
-//        guard let homeNav = storyboard.instantiateViewController(identifier:"HomeNavigationViewController") as? HomeNavigationViewController else {
-//            return
-//        }
-//
-//
-//        guard let profile = storyboard.instantiateViewController(identifier: "profile") as? ProfileViewController else {
-//            return
-//        }
-//
-//        guard let detail = storyboard.instantiateViewController(identifier: "DetailMovieViewController") as? DetailMovieViewController else {
-//            return
-//        }
-//
-//        let tabBarController  = storyboard.instantiateViewController(identifier: "tabbar_main") as! TabBarViewController
-//
-//
-//        //set instance home
-//        let homeProvider = HomeProvider()
-//        let homeInstance = homeProvider.createHome()
-//        homeNav.viewControllers = [homeInstance]
-//
-//        tabBarController.viewControllers = [homeNav]
-//
-//        window.rootViewController = tabBarController
-//        window.makeKeyAndVisible()
+
         
         self.window = UIWindow(windowScene: windowScene)
         
@@ -67,29 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let profileView = storyboard.instantiateViewController(identifier: "ProfileNavigationController") as? ProfileNavigationController else { return }
         
-//        guard let favouriteNC = storyboard.instantiateViewController(identifier: "FavouriteNavigationController") as? FavouriteNavigationController
-//        else {
-//
-//            return
-//        }
-        
-        
-//        guard let personalVC = storyboard.instantiateViewController(identifier: "ProfileViewController") as? ProfileViewController else {
-//            print("ViewController not found")
-//            return
-//        }
-//
-//        guard let personalNC =
-//                storyboard.instantiateViewController(identifier: "ProfileNavigationController") as? ProfileNavigationViewController else {
-//            print("ViewController not found")
-//            return
-//        }
-        
-        
-//        guard let searchNC = storyboard.instantiateViewController(identifier: "SearchNavigationController") as? SearchNavigationController else {
-//            return
-//        }
-//
+
         
         let tabBarController  = storyboard.instantiateViewController(withIdentifier: "tabbar_main") as! TabBarViewController
         
@@ -98,19 +52,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeInstance = homeProvider.createHome()
         let profileProvider = ProfileProvider()
         let profileInstance = profileProvider.createProfile()
-//        let favRouter = FavoriteRouter()
-//        let favVC2 = favRouter.createFavouriteModule()
+
         
-        
-        //Search
-//        let searchRouter = SearchRouter()
-//        let searchVC = searchRouter.createSearchModule()
-        
-//        favouriteNC.viewControllers = [favVC2]
+
         homeView.viewControllers = [homeInstance]
         profileView.viewControllers = [profileInstance]
-//        personalNC.viewControllers = [personalVC]
-//        searchNC.viewControllers = [searchVC]
+
         
         tabBarController.viewControllers = [homeView,profileView]
         

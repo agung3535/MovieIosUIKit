@@ -451,6 +451,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tidak ada film difavoritkan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-9T-RJw">
+                                <rect key="frame" x="28" y="437" width="358" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TKA-Ju-C29"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -475,6 +482,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="we0-xV-tdX"/>
                     <connections>
+                        <outlet property="emptyFav" destination="rgI-9T-RJw" id="qCT-9B-UnB"/>
                         <outlet property="favoriteCollection" destination="bJW-LB-giF" id="2jC-dq-G9l"/>
                         <outlet property="userProfile" destination="quA-JH-r9G" id="2T4-Ny-q9V"/>
                     </connections>
